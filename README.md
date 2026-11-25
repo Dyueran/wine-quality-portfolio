@@ -1,10 +1,21 @@
 # Red Wine Quality Classification
 
-Data science portfolio project. The aim is to find out whether the physicochemical properties of red wine can be used to classify wines into two quality groups, "good" and "average".
+Data science portfolio project. The aim is to find out whether the physicochemical properties of red wine can be used to classify wines into two quality groups, "good" (quality 6 or above) and "average" (quality 5 or below). This cut-off is a rule I chose for this project, not an official definition.
 
-## Status
+## Results
 
-Draft submission. At the moment the project contains one model (Logistic Regression). For the final portfolio I plan to add Naive Bayes, Decision Tree and Random Forest, and a Linear Regression model that predicts the quality score.
+Test accuracy on the same 272 test wines, and the mean of 5-fold cross-validation on all 1359 wines:
+
+| model | test accuracy | 5-fold CV mean |
+|---|---|---|
+| Logistic Regression | 0.735 | 0.730 |
+| Naive Bayes | 0.724 | 0.720 |
+| Decision Tree | 0.625 | 0.648 |
+| Random Forest | 0.750 | 0.723 |
+
+Logistic Regression, Naive Bayes and Random Forest are very close in cross-validation, so I cannot say that one is really better. The Decision Tree overfitted the training data and was the weakest.
+
+As a secondary analysis, Linear Regression predicted the quality score with an RMSE of 0.703 and an R² of 0.384 on the test set.
 
 ## Files
 
